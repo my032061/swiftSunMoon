@@ -13,6 +13,11 @@
 		108713A61CFE7D9B00F00E12 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 108713A51CFE7D9B00F00E12 /* Assets.xcassets */; };
 		108713A91CFE7D9B00F00E12 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 108713A71CFE7D9B00F00E12 /* LaunchScreen.storyboard */; };
 		108713B41CFE7D9B00F00E12 /* sunMoomSwiftTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 108713B31CFE7D9B00F00E12 /* sunMoomSwiftTests.swift */; };
+		108713BF1CFE7F7500F00E12 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 108713BE1CFE7F7500F00E12 /* CoreLocation.framework */; };
+		108713C31CFE84D900F00E12 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 108713C21CFE84D900F00E12 /* MapKit.framework */; };
+		10AF760C1CFFDA470098FE95 /* MYLocationBrain.m in Sources */ = {isa = PBXBuildFile; fileRef = 10AF76081CFFDA470098FE95 /* MYLocationBrain.m */; };
+		10AF760D1CFFDA470098FE95 /* MYLocationsAnnocation.m in Sources */ = {isa = PBXBuildFile; fileRef = 10AF760B1CFFDA470098FE95 /* MYLocationsAnnocation.m */; };
+		10AF760F1D00235E0098FE95 /* sunMoon.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10AF760E1D00235E0098FE95 /* sunMoon.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,6 +41,14 @@
 		108713AF1CFE7D9B00F00E12 /* sunMoomSwiftTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = sunMoomSwiftTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		108713B31CFE7D9B00F00E12 /* sunMoomSwiftTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = sunMoomSwiftTests.swift; sourceTree = "<group>"; };
 		108713B51CFE7D9B00F00E12 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		108713BE1CFE7F7500F00E12 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		108713C21CFE84D900F00E12 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
+		10AF76071CFFDA470098FE95 /* sunMoomSwift-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "sunMoomSwift-Bridging-Header.h"; sourceTree = "<group>"; };
+		10AF76081CFFDA470098FE95 /* MYLocationBrain.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MYLocationBrain.m; path = location/MYLocationBrain.m; sourceTree = "<group>"; };
+		10AF76091CFFDA470098FE95 /* MYLocationBrain.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MYLocationBrain.h; path = location/MYLocationBrain.h; sourceTree = "<group>"; };
+		10AF760A1CFFDA470098FE95 /* MYLocationsAnnocation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MYLocationsAnnocation.h; path = location/MYLocationsAnnocation.h; sourceTree = "<group>"; };
+		10AF760B1CFFDA470098FE95 /* MYLocationsAnnocation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MYLocationsAnnocation.m; path = location/MYLocationsAnnocation.m; sourceTree = "<group>"; };
+		10AF760E1D00235E0098FE95 /* sunMoon.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = sunMoon.swift; path = sunMoon/sunMoon.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -43,6 +56,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				108713C31CFE84D900F00E12 /* MapKit.framework in Frameworks */,
+				108713BF1CFE7F7500F00E12 /* CoreLocation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -59,6 +74,8 @@
 		108713921CFE7D9B00F00E12 = {
 			isa = PBXGroup;
 			children = (
+				108713C21CFE84D900F00E12 /* MapKit.framework */,
+				108713BE1CFE7F7500F00E12 /* CoreLocation.framework */,
 				1087139D1CFE7D9B00F00E12 /* sunMoomSwift */,
 				108713B21CFE7D9B00F00E12 /* sunMoomSwiftTests */,
 				1087139C1CFE7D9B00F00E12 /* Products */,
@@ -77,12 +94,18 @@
 		1087139D1CFE7D9B00F00E12 /* sunMoomSwift */ = {
 			isa = PBXGroup;
 			children = (
+				10AF76081CFFDA470098FE95 /* MYLocationBrain.m */,
+				10AF76091CFFDA470098FE95 /* MYLocationBrain.h */,
+				10AF760A1CFFDA470098FE95 /* MYLocationsAnnocation.h */,
+				10AF760B1CFFDA470098FE95 /* MYLocationsAnnocation.m */,
+				10AF760E1D00235E0098FE95 /* sunMoon.swift */,
 				1087139E1CFE7D9B00F00E12 /* AppDelegate.swift */,
 				108713A01CFE7D9B00F00E12 /* ViewController.swift */,
 				108713A21CFE7D9B00F00E12 /* Main.storyboard */,
 				108713A51CFE7D9B00F00E12 /* Assets.xcassets */,
 				108713A71CFE7D9B00F00E12 /* LaunchScreen.storyboard */,
 				108713AA1CFE7D9B00F00E12 /* Info.plist */,
+				10AF76071CFFDA470098FE95 /* sunMoomSwift-Bridging-Header.h */,
 			);
 			path = sunMoomSwift;
 			sourceTree = "<group>";
@@ -197,7 +220,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				10AF760F1D00235E0098FE95 /* sunMoon.swift in Sources */,
 				108713A11CFE7D9B00F00E12 /* ViewController.swift in Sources */,
+				10AF760C1CFFDA470098FE95 /* MYLocationBrain.m in Sources */,
+				10AF760D1CFFDA470098FE95 /* MYLocationsAnnocation.m in Sources */,
 				1087139F1CFE7D9B00F00E12 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -329,10 +355,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = sunMoomSwift/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = MYSunMoon.sunMoomSwift;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "sunMoomSwift/sunMoomSwift-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
 		};
@@ -340,10 +369,12 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = sunMoomSwift/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = MYSunMoon.sunMoomSwift;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "sunMoomSwift/sunMoomSwift-Bridging-Header.h";
 			};
 			name = Release;
 		};
@@ -390,6 +421,7 @@
 				108713BA1CFE7D9B00F00E12 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		108713BB1CFE7D9B00F00E12 /* Build configuration list for PBXNativeTarget "sunMoomSwiftTests" */ = {
 			isa = XCConfigurationList;
@@ -398,6 +430,7 @@
 				108713BD1CFE7D9B00F00E12 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
