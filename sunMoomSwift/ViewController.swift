@@ -25,7 +25,6 @@ class ViewController: UIViewController {
     }
     
     override func viewDidAppear(animated: Bool) {
-        //
         if !setLocation() {
             cityLabel.text = "error"
         }
@@ -40,7 +39,8 @@ class ViewController: UIViewController {
     }
     
     func setLocation() -> Bool {
-        let locationManager = MYLocationBrain.sharedInstance().location()
+        let locationBrain = MYLocationBrain.sharedInstance()
+        let locationManager = locationBrain.location()
         func setLocationErr() {
             locationManager.stopMonitoringSignificantLocationChanges()
             return
@@ -53,11 +53,11 @@ class ViewController: UIViewController {
         let coordinate = location.coordinate
         longitude = coordinate.longitude
         latitude = coordinate.latitude
-        guard let place = MYLocationBrain.sharedInstance().revGeocodeLocation(location) else {
+        guard let place = locationBrain.revGeocodeLocation(location) else {
             setLocationErr()
             return false
         }
-        guard let cityName = MYLocationBrain.sharedInstance().getCityName(place) else {
+        guard let cityName = locationBrain.getCityName(place) else {
             setLocationErr()
             return false
         }
